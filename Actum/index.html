@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Actum ajax form</title>
+        <link rel="icon" href="https://www.actumdigital.com/favicon-16x16.png">
+        <link rel="stylesheet" type="text/css" href="assets/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="assets/form-validation.css">
+        <link rel="stylesheet" type="text/css" href="assets/sticky-footer.css">
+    </head>
+    <body>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">
+                <svg width="84" height="20" viewBox="0 0 136 32" xmlns="http://www.w3.org/2000/svg"><path d="M18.596 17.915h-5.172l2.586-8.62 2.586 8.62zm116.996 12.562V.427h-13.67l-5.911 16.256L110.1.427H96.306V19.27c0 2.832-2.34 3.57-3.818 3.57-1.478 0-3.695-.738-3.695-3.57V.427H55.665v4.187C52.956 1.782 48.645.181 43.227.181c-8.744 0-15.887 6.404-16.38 14.531L22.045.427H9.729L0 30.477h9.852l1.848-5.912h8.62l1.725 5.912h9.975l-1.601-4.803c3.079 3.57 7.635 5.788 12.808 5.788 8.005 0 14.286-3.695 15.394-10.222h-9.606c-1.355 2.094-3.571 2.833-5.788 2.833-4.557 0-7.02-3.695-7.02-8.251 0-4.557 2.34-8.252 7.02-8.252 2.463 0 4.433.493 5.788 2.71h13.917v20.197h9.236V10.279h7.02v10.838c0 3.695 1.231 6.281 3.694 7.882 2.586 1.6 5.542 2.463 9.606 2.463 3.818 0 7.266-.863 9.73-2.586 2.462-1.601 3.57-4.434 3.57-8.252V12.62l6.404 17.858h7.635l6.774-18.966v18.966h8.991z" fill="#ED3D25" fill-rule="evenodd"></path></svg>
+                SVG logo
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Navbar end-->
+
+        <!--Form-->
+        <div class="container" style="padding-top: 80px;">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-8">
+                    <h4 class="mb-3">Actum - Yaman Ktish</h4>
+                    <span class="badge badge-primary">Bootstrap v4</span>
+                    <span class="badge badge-primary">jQuery</span>
+                    <span class="badge badge-primary">Ajax</span>
+                    <span class="badge badge-primary"></span>
+                    <hr class="mb-4">
+                    <div class="alert alert-success" style="display: none" role="alert">
+                        Success
+                    </div>
+                    <div class="alert alert-danger wrong-response" style="display: none" role="alert">
+                        Failure response because the first name is 'John'.
+                    </div>
+                    <div class="alert alert-danger complete" style="display: none" role="alert">
+                        You must complete all required fields correctly.
+                    </div>
+                    <div class="messages"></div>
+                    <form class="needs-validation" id="form" novalidate>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                        <label for="name">First name <span class="text-muted">(Required)</span></label>
+                        <input type="text" class="form-control" id="name" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                        <label for="surname">Last name <span class="text-muted">(Required)</span></label>
+                        <input type="text" class="form-control" id="surname" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Valid last name is required.
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="date">Date of birth <span class="text-muted">(Required)</span></label>
+                        <input type="date" class="form-control" id="date" placeholder="07/11/1998" required>
+                        <div class="invalid-feedback">
+                        Please enter a valid date of birth.
+                        </div>
+                    </div>
+            
+                    <div class="mb-3">
+                        <label for="email">Email <span class="text-muted">(Required)</span></label>
+                        <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                        <div class="invalid-feedback">
+                        Please enter a valid email address.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="custom-control custom-radio">
+                            <input id="credit" name="gender" type="radio" value="male" class="custom-control-input" checked="" required="">
+                            <label class="custom-control-label" for="credit">Male</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="debit" name="gender" type="radio" value="female" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="debit">Female</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="children">Children <span class="text-muted">(Required)</span></label>
+                        <input type="number" class="form-control" id="children" placeholder="ex: 2" required>
+                        <div class="invalid-feedback">
+                        Please enter a number of children.
+                        </div>
+                    </div>
+                    
+                    <hr class="mb-4">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit" id="add">Submit</button>
+                    </form>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        <!--Form end-->
+
+        <!--Footer-->
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted">Place sticky footer content here.</p>
+            </div>
+        </footer>
+          
+        <!--Footer end-->
+        <script src="assets/jquery-3.3.1.slim.min.js"></script>
+        <script src="assets/bootstrap.bundle.min.js"></script>
+        <script src="assets/form-validation.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    </body>
+</html>
